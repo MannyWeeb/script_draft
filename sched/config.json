@@ -1,0 +1,13 @@
+{
+    "agendaConfig": {
+        "db": {
+            "address": "localhost:27017/agenda"
+        },
+        "maxConcurrency": 15,
+        "defaultConcurrency": 10,
+        "lockLimit": 0,
+        "defaultLockLimit": 0,
+        "defaultLockLifetime": 10000
+    },
+    "logging": true
+}
