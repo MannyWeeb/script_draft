@@ -6,10 +6,10 @@
  * @method add_branches() Appends an array of NavTree objects, routes are then recursively adjusted throughout the whole descendant tree.
  * @method add_leafs() Appends an array of NavTree objects, used for adding leaf objects (ie: NavTrees without children).
  */
-export class NavTree {
+export default class NavTree {
     constructor(name, path, icon) {
         this.name = name;
-        this.path = path || name ? name.toLowerCase().replace(/\s/g, "-") : "404";
+        this.path = path ? path : name ? name.toLowerCase().replace(/\s/g, "-") : "404";
         this.icon = icon || "";
         this.active = false;
         this.children = [];
@@ -19,7 +19,7 @@ export class NavTree {
      * @description Append an array of NavTree into the current arborescence, recursively adjusts all descendant's route, relative to it's parent's path.
      * 
      * @param {Array[NavTree]} children The array of NavTree to append into the arborescence. 
-     * @param {String} path Optional parentPath.
+     * @param {String} path Optional parentPath
      * @returns {NavTree} The modified NavTree.
      */
     add_branches(children, path) {
