@@ -1,4 +1,4 @@
-/*
+/* 
     Format:
     
     "Interval" : { ...Jobs }
@@ -14,12 +14,10 @@ export default {
         }
     },
     "*/1 * * * *": {
-        fetchMail: {
+        sendMail: {
             priority: "low",
             action: (jobDefinition) => {
-                console.log("You've a mail")
-
-
+                console.log("I've sent a mail")
             }
         },
         paySalary: {

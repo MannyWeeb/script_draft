@@ -26,13 +26,12 @@ agenda.start()
                 jobProc.push(agenda.every(schedule, name));
             })
         );
-
         Promise.all(jobProc)
             .catch((reason) => {
                 console.log("Failed to schedule job requests...");
                 console.log(reason);
             })
             .then(() => {
-                console.log(`Jobs in memmory:${jobProc.length}`);
+                console.log(`Jobs in memory:${jobProc.length}`);
             });
     });

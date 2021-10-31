@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.mjs",
   "scripts": {
-    "scheduler": "nodemon --experimental-json-modules --experimental-modules src/index.mjs"
+    "start": "nodemon --experimental-json-modules --experimental-modules src/index.mjs"
   },
   "keywords": [],
   "author": "",
